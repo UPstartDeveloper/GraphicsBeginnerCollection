@@ -1,3 +1,14 @@
+# Ignore all 
+*
+
+# Unignore all files with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+########### The above comes from VenomVendor on Stack Overflow: https://stackoverflow.com/questions/5711120/gitignore-binary-files-that-have-no-extension
+
 # Prerequisites
 *.d
 
