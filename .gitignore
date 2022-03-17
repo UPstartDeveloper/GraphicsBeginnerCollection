@@ -41,3 +41,9 @@
 *.exe
 *.out
 *.app
+
+# Project Specific Stuff
+.vscode
+.DS_Store
+*.plist
+*.dSYM/*
