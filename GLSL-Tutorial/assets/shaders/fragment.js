@@ -46,6 +46,7 @@ const hsl2rgb = `
 
 export const fragmentShader = `
     varying float vDistortion;
+    varying vec2 vUv;
 
     ${hsl2rgb}
 
@@ -55,6 +56,8 @@ export const fragmentShader = `
          * keep saturation and light at 0.5, for a "pastel look"
          */
         vec3 color = hsl2rgb(0.4 + vDistortion * 0.4, 0.5, 0.5);
-        gl_FragColor = vec4(color, 1.0);
+
+        float alpha = 1.0 - step(0.05, abs(distance(vUv, vec2(0.5, 0.5)) - 0.4));
+        gl_FragColor = vec4(color, alpha);
     }
 `;

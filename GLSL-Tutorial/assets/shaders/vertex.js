@@ -115,7 +115,10 @@ const pnoise = `
 
 export const vertexShader = `
     uniform float uTime;
-     varying float vDistortion;  // this var can be shared between shaders
+
+    // these vars can be shared between shaders
+    varying float vDistortion; 
+    varying vec2 vUv; 
 
     ${pnoise}
 
@@ -128,6 +131,9 @@ export const vertexShader = `
         transPosition.z = transPosition.z + distortion;
 
         vDistortion = distortion;
+
+        // pass the uv coords to the fragment shader
+        vUv = uv;
 
         // change the pos of the vertices
         gl_Position = projectionMatrix * modelViewMatrix * vec4(transPosition, 1.0);

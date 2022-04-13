@@ -22,7 +22,9 @@ const material = new THREE.ShaderMaterial({
   // add a uniform - this will be the same for all the vertices/pixels in the shader
   uniforms: {
     uTime: {value: 0},
-  }
+  },
+  // set transparent to true - based on our alpha, some parts of our plane will be see-through
+  transparent: true
 });
 
 const planeMesh = new THREE.Mesh(planeGeometry, material);
