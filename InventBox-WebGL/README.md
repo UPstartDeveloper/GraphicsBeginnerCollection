@@ -33,3 +33,12 @@ Credit to Darius for making this!
         1. WebGL uses a double buffer   
             1. one is visible to the user
             2. the other is the image to-be-seen - handled under the hood
+4. Multi-color Triangle (Vertex Attributes Tutorial)
+    1. Generic attrs of primitives
+        a. stores a ref to a named attr
+        b. AND a ref to an array with the buffer data you care about
+        c. How to use:
+            i. declare the generic attr of the vertices (can ONLY go by vertex, not per-pixel)
+            ii. use it in the vertex shader
+            iii. enable it in JS using `gl.enableVertexAttribPointer
+            iv. do this after linking!
