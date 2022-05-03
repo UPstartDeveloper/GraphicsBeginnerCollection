@@ -33,3 +33,17 @@ Credit to Darius for making this!
         1. WebGL uses a double buffer   
             1. one is visible to the user
             2. the other is the image to-be-seen - handled under the hood
+4. Multi-color Triangle (Vertex Attributes Tutorial)
+    1. Generic attrs of primitives
+        a. stores a ref to a named attr
+        b. AND a ref to an array with the buffer data you care about
+        c. How to use:
+            i. declare the generic attr of the vertices (can ONLY go by vertex, not per-pixel)
+            ii. use it in the vertex shader
+            iii. enable it in JS using `gl.enableVertexAttribPointer
+            iv. do this after linking!
+5. Spinning Triangle (matrix tutorial)
+    1. the default clipping space in WebGL is outside [-1, 1] in XY plane.
+        a. note that although the coordinate space is the same in both X and Y, the actual distaces are not the same (by default, you can change this by setting `width` and `height`)
+        b. that is because the HTML canvas itself is not a perfect square 
+    2. in WebGL, the order that the matrix transformation are applied to your vertices is in the *reverse* order of how you defined them in code
