@@ -34,13 +34,13 @@ gl.shaderSource(vertexShader, `
 gl.compileShader(vertexShader);
 
 // create fragment shader 
-const fragmentShader = gl.createShader(gl.FRAGENT_SHADER);
+const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
 gl.shaderSource(fragmentShader, `
     void main() {
         gl_FragColor = vec4(1, 0, 0, 1); // this is hardcoding a color across ALL pixels
     }
 `);
-gl.compileShader();
+gl.compileShader(fragmentShader);
 
 // create program
 const program = gl.createProgram();
@@ -60,7 +60,7 @@ gl.enableVertexAttribArray(positionLocation);  // attrs are disabled by default
  * no stride, 
  * no offset
  */
-gl.vertexAttribPointer(positionLocation, 3, gl.Float, false, 0, 0);
+gl.vertexAttribPointer(positionLocation, 3, gl.FLOAT, false, 0, 0);
 
 gl.useProgram(program); // creates an exec on the GPU
 // draw!!
