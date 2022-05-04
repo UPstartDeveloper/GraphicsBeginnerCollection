@@ -58,3 +58,15 @@ Credit to Darius for making this!
     2. near should not be 0 --> far too small, mathematically it doesn't work
     3. far plane = can be decreased to help improve performance
     4. need to do perspective projection AFTER all the other geometric transforms
+
+## 8: Moving the Camera Around (View Matrix)
+    1. Motivation: cameras are important for when the world is too big, and we only want to look at certain things at once
+    2. Camera starts out at the origin. It *always* has to be at the origin.
+    3. Theory vs. Implementation:
+        a. theory: what we want is to move the world objects a little, move the camera, and we get a new view of the scene
+        b. in code: we can ONLY transform the world objects
+            1. compute the change that would happen to the camera (the camera transform)
+            2. apply the (additive) inverse of that to the scene objects (in addition to whatever transforms they will have) - so that it lets the camera stay at the origins, but relatively it's orientation is the same distance away as we wanted
+    4. Object transformation (`To`) =  model matrix, applied to the objects in the scene
+    5. Camera transformation (`Tc`) = camera matrix
+    6. Result = `To - Tc  # i.e. where the scene objects finally end up`
