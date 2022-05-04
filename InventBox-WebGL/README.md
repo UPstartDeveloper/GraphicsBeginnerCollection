@@ -70,3 +70,12 @@ Credit to Darius for making this!
     4. Object transformation (`To`) =  model matrix, applied to the objects in the scene
     5. Camera transformation (`Tc`) = camera matrix
     6. Result = `To - Tc  # i.e. where the scene objects finally end up`
+
+## 9: The Point Cloud
+    1. How to create a point cloud:
+        a. can use a function + a for loop, basically
+    2. When you use `gl.POINTS` in `gl.drawArrays()`, you need to set `gl_PointSize` in the vertex shader.
+    3. If you don't enable the depth test --> you get a point cloud
+        a. but if you do - it basically looks like a sphere.s
+
+    
