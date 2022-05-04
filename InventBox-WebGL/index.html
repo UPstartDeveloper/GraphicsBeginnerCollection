@@ -7,11 +7,15 @@
     <title>InventBox WebGL Introduction</title>
     <!-- the first script is for glmatrix - so we can do matrix ops FAST in JS -->
     <script src="assets/js/gl-matrix-min.js" defer></script>
-    <script src="assets/js/lesson5.js" defer></script>
+    <script src="assets/js/lesson6.js" defer></script>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1>WebGL!!!</h1>
     <canvas id="c"></canvas>
+    <script>
+        const _c = document.getElementById("c");
+        _c.width = window.innerWidth;
+        _c.height = window.innerHeight;
+    </script>
 </body>
 </html>
