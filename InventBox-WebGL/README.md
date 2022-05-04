@@ -50,5 +50,11 @@ Credit to Darius for making this!
         b. that is because the HTML canvas itself is not a perfect square 
     2. in WebGL, the order that the matrix transformation are applied to your vertices is in the *reverse* order of how you defined them in code
 
-## 6
+## 6: Spinning Cube
     1. only by rotating along all the 3 coordinate axes do we see all the faces!
+
+## 7: Cube with Perspective
+    1. perspective = type of projection
+    2. near should not be 0 --> far too small, mathematically it doesn't work
+    3. far plane = can be decreased to help improve performance
+    4. need to do perspective projection AFTER all the other geometric transforms
