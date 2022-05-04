@@ -14,10 +14,11 @@ if (!gl) {
 function spherePointCloud(numPoints) {
     let points = [];
     for (let i = 0; i < numPoints; i++) {
-        // because we normalize, all the points are the same (radial) dist from the center
+        // make a random point
         const r = () => Math.random() - 0.5;  // stay in the range [-.5, .5]
         const inputPoint = [r(), r(), r()];
-        const outputPoint = glMatrix.vec3.normalize(glMatrix.vec3.create(), inputPoint);
+        // because we normalize, all the points are the same (radial) dist (of 1) from the center
+        const outputPoint = glMatrix.vec3.normalize(glMatrix.vec3.create(), inputPoint); // the length of a vector divided by itself
         points.push(...outputPoint);
     }
     return points;

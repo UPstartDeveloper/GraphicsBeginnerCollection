@@ -76,6 +76,26 @@ Credit to Darius for making this!
         a. can use a function + a for loop, basically
     2. When you use `gl.POINTS` in `gl.drawArrays()`, you need to set `gl_PointSize` in the vertex shader.
     3. If you don't enable the depth test --> you get a point cloud
-        a. but if you do - it basically looks like a sphere.s
+        a. but if you do - it basically looks like a sphere.
+
+## 10: Drawing Images
+
+1. We do this via textures!
+2. We bind textures just we do buffers
+3. UV coords map textures to objects (treat like an attribute)
+    a. From [Wikipedia](https://en.wikipedia.org/wiki/UV_mapping): 
+        
+        i. projection of 2D texture image onto a 3D model
+        ii. we use UV because we're in 2D (and we don't want to reuse XY because those describe world space coordinates)
+4. more on [UV coordinates](https://stackoverflow.com/questions/3314219/how-do-u-v-coordinates-work), by Michael Cole on Stack Overflow:
+    a. they are *bounded* between 0 to 1.
+    b. it is *relative* - 
+
+        i. as a corollary - we don't need units to describes UV coords
+        ii. we do need to be very intentional when wrapping 2D textures around 3D geometries that are not really analogous to it - e.g. a sqaure texture on to a sphere
+5. You can create an unlimited number of textures, but only attach 96 of them at a time (at least in WebGL 1.0).
+    a. these textures are attached at slots/locations, numbered starting at gl.TEXTURE0.
+
+6. texel = "textured pixel"
 
     
