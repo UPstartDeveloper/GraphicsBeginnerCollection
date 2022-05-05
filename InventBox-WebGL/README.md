@@ -98,4 +98,20 @@ Credit to Darius for making this!
 
 6. texel = "textured pixel"
 
-    
+## 11: Diffuse Lighting Tutorial
+1. Motivation: lighting lets us:
+    a. see where vertices are 
+    b. see internal edges of 3D meshes (e.g. lines on a box)
+    c. in short - be more realistic!
+2. Surface Normals:
+    a. a normalized vector that is normal to a surface (tells you where the surface is pointing "outwards")
+3. Diffuse Lighting uses angles:
+    a. brightness = cos(theta), where theta = angle between surface normal, and the direction in which light travels (should also be a normalized vector)
+    b. why cosine?
+
+        i. acute angle (of 0-90) --> the surface is black
+        ii. obtuse angle (of 90-180) --> surface is lit
+
+4. In code, cosine(theta), where theta is the angle between `A` and `B` vectors is the *dot product*
+5. The sin(theta) would be the *cross product*
+6. note: semi-colons are ALWAYS needed at the end of lines in GLSL!
