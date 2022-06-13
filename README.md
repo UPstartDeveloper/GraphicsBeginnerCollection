@@ -5,4 +5,4 @@
 
 3. For the GLSL tutorial, see Owen King's blog post: [link](https://ownkng.dev/thoughts/writing-a-webgl-program).
 
-4. For the Ray Tracing in One Weekend series, see here: [GitHub link](https://github.com/RayTracing/raytracing.github.io).
+4. For the Ray Tracing in One Weekend series, see here: [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html).
