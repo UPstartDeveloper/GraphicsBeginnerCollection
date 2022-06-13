@@ -47,3 +47,6 @@
 .DS_Store
 *.plist
 *.dSYM/*
+
+# Assets
+*.ppm
